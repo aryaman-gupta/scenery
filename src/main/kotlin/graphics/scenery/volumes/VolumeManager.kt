@@ -435,7 +435,7 @@ class VolumeManager(override var hub : Hub?) : Node(), Hubable, HasGeometry, Req
     private fun TransferFunction.toTexture(): Texture3D {
         val data = this.serialise()
         return SimpleTexture2D(data, textureSize, textureHeight,
-            Texture.InternalFormat.FLOAT32, Texture.Wrap.CLAMP_TO_EDGE,
+            Texture.InternalFormat.R32F, Texture.Wrap.CLAMP_TO_EDGE,
             Texture.MinFilter.LINEAR, Texture.MagFilter.LINEAR)
     }
 

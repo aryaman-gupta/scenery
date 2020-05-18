@@ -3,8 +3,6 @@ package graphics.scenery.tests.examples.advanced
 import graphics.scenery.*
 import graphics.scenery.backends.Renderer
 import graphics.scenery.numerics.Random
-import graphics.scenery.textures.Texture
-import graphics.scenery.utils.Image
 import graphics.scenery.utils.extensions.minus
 import org.joml.Vector3f
 import org.joml.Vector4f
@@ -84,13 +82,13 @@ class PhDHat:SceneryBase("CongratsUlrik!", windowWidth = 800, windowHeight = 800
 
         scene.addChild(hat)
 
-//        val desc = TextBoard()
-//        desc.text = "sponza"
-//        desc.position = Vector3f(-2.0f, -0.1f, -4.0f)
-//        desc.fontColor = Vector4f(1.0f, 1.0f, 1.0f, 1.0f)
-//        desc.backgroundColor = Vector4f(0.1f, 0.1f, 0.1f, 1.0f)
-//        desc.transparent = 0
-//        scene.addChild(desc)
+        val wishes = TextBoard()
+        wishes.text = "Congratulations and best wishes, Ulrik!"
+        wishes.position = Vector3f(-4.0f, -5.1f, -4.0f)
+        wishes.fontColor = Vector4f(0.5f, 0.5f, 0.5f, 0.5f)
+        wishes.backgroundColor = Vector4f(0.1f, 0.1f, 0.1f, 1.0f)
+        wishes.transparent = 0
+        scene.addChild(wishes)
 
         val erythrocyte = Mesh()
         erythrocyte.readFromOBJ(Mesh::class.java.getResource("models/erythrocyte.obj").file)
